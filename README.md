@@ -1,27 +1,28 @@
-# Calculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
+Preview : 
 
-## Development server
+https://user-images.githubusercontent.com/101436017/220441559-bf7bf6ff-ac7e-487c-a51a-41b155a74fb4.mp4
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+___________________________________________________________________________________________________________________
+Dark Mode:
 
-## Code scaffolding
+![3](https://user-images.githubusercontent.com/101436017/220441911-1385557a-6d44-4244-a7fb-8bf8d0b965f7.png)
+___________________________________________________________________________________________________________________
+Light Mode: 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![4](https://user-images.githubusercontent.com/101436017/220441962-780baff7-760a-4d3e-ad96-e380e1faf15b.png)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+• Hesap makinesinin özellikleri:
+1. Sayıların gösterildiği alanda 2 satır olacak, üst satırda klavyeden veya arayüzdeki
+butonlardan gelen değerler gösterilecek. Alt satırda ise sonuç kısmı gösterilecek.
+2. Butonlarda sayısal, parantez ve operatör değerleri yer alacak. Ayrıca son işlemi
+sıfırlama, geçmiş işlemler gibi butonlar da vardır.
+3. Geçmiş işlemler butonuna bastığınızda son 3 işlemin işlemler ve sonuç kısmı
+herhangi bir yerde gösterilebilir.
+4. Herhangi bir matematik ile ilgili javascript dosyası kullanılabilir.
+• Bu task’ın bitiş süresi 3 gündür.
+• Projeyi paylaşırken, projenin son halinin ekran görüntülerini alıp paylaşınız.
