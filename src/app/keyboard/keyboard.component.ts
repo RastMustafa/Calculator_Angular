@@ -1,17 +1,24 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { OperationEvaluter } from '../services/operationEvaluter.service';
+import { LightDarkMode } from '../services/lightDarkMode.service';
 @Component({
   selector: 'app-keyboard',
   templateUrl: './keyboard.component.html',
   styleUrls: ['./keyboard.component.less'],
 })
 export class KeyboardComponent implements OnInit {
-  constructor(private operationEvaluter: OperationEvaluter) {}
+  constructor(
+    private operationEvaluter: OperationEvaluter,
+    private lightDarkMode: LightDarkMode
+  ) {}
 
-  ngOnInit(): void {}
+  selectedMode: boolean = false;
+  ngOnInit(): void {
+    this.lightDarkMode.updateSelectedMode.subscribe(() => {
+      this.selectedMode = this.lightDarkMode.selectedMode;
+    });
+  }
   evalAnswer() {
-    console.log(this.operationEvaluter.clacHistory);
-
     try {
       if (
         this.operationEvaluter.answer !== 0 &&

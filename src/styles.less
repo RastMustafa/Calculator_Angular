@@ -3,14 +3,21 @@
 @LightModBack: #A9DCFD;
 @LightBlue: #D8EEFF;
 
-.keyboardBackground {
-    border-radius: 15% 15% 0% 0%;
+.keyboard-background-light {
+    border-radius: 10% 10% 0% 0%;
     background: rgb(230, 246, 255);
     background: linear-gradient(150deg, rgba(230, 246, 255, 0.804359243697479) 0%, rgb(115, 205, 247) 60%, rgb(211, 228, 250) 100%);
     box-shadow: -5px -5px 55px 0.1px rgba(160, 160, 160, 0.5);
 }
 
-.keyStyle {
+.keyboard-background-dark {
+
+    border-radius: 15% 15% 0% 0%;
+    background: rgb(20, 66, 124);
+    background: linear-gradient(45deg, rgba(11, 35, 87, 0.9) 0%, rgb(29, 56, 116) 59%, rgba(5, 29, 80, 0.6) 100%);
+}
+
+.key-style {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     box-shadow: 0.2px 0.2px 2px rgba(145, 141, 141, 0.9);
@@ -19,11 +26,32 @@
     margin: 0.3rem;
     width: 3.4rem;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
-.divBack {
-    background: rgba(255, 255, 255, 0.3);
+.key-style-light {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    cursor: pointer;
+
+
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+        transition: all 0.2s linear;
+    }
+}
+
+.key-style-dark {
+    background-color: rgba(5, 5, 5, 0.3);
+    color: white;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: rgba(5, 5, 5, 0.6);
+        transition: all 0.2s linear;
+    }
 }
 
 .lightBack {
@@ -38,11 +66,30 @@
     background-color: #D8EEFF;
 }
 
-
 .lightBack {
     background-color: @LightModBack;
 }
 
-.white {
-    color: white;
+.screen-light {
+    background: linear-gradient(166.34deg, #fcfcfc 0%, #fcfcfc 22.9%, #fcfcfc 100%);
+    color: #000309;
+    transition: all 0.5s linear;
+
+
+}
+
+.screen-dark {
+    color: #fcfcfc;
+    background: linear-gradient(-45deg, rgba(11, 35, 87, 0.9) 0%, rgb(29, 56, 116) 59%, rgba(5, 29, 80, 0.6) 100%);
+    transition: all 0.5s linear;
+
+}
+
+.mode-switch-light {
+    background-color: rgb(35, 140, 189);
+
+}
+
+.mode-switch-dark {
+    background-color: #1B6A9C;
 }

@@ -7,6 +7,7 @@ import { KeyboardComponent } from './keyboard/keyboard.component';
 import { OptionsComponent } from './screen/options/options.component';
 import { ButtonListenerDirective } from './directives/buttonListener.directive';
 import { OperationEvaluter } from './services/operationEvaluter.service';
+import { LightDarkMode } from './services/lightDarkMode.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,7 @@ import { OperationEvaluter } from './services/operationEvaluter.service';
     ButtonListenerDirective,
   ],
   imports: [BrowserModule],
-  providers: [OperationEvaluter],
+  providers: [OperationEvaluter, LightDarkMode],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

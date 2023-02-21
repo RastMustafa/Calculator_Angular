@@ -19,3 +19,78 @@
     background: transparent;
     /* Optional: just make scrollbar invisible */
 }
+
+
+
+.mode-light {
+    background: #A9DCFD;
+}
+
+.mode-dark {
+    background: #1B6A9C;
+}
+
+.mode-switcher {
+    min-width: 5rem;
+
+    & .mon-on-light-mode {
+        position: absolute;
+        background-color: transparent;
+        right: -0.4rem;
+        width: 3rem;
+        height: 2rem;
+        border-radius: 40px;
+        padding: 0rem 1rem;
+        color: rgba(46, 46, 46, 0.5) !important;
+        text-align: center;
+        top: 0.15rem;
+
+
+    }
+
+    & .sun-on-light-mode {
+        position: absolute;
+        width: 3rem;
+        height: 2.5rem;
+        background: #D8EEFF;
+        border-radius: 40px;
+        padding: 0rem 1rem;
+        left: -0.2rem;
+        color: rgba(46, 46, 46, 0.5) !important;
+        text-align: center;
+        top: -0.1rem;
+        transition: all 1s linear;
+
+
+    }
+
+    & .mon-on-dark-mode {
+        position: absolute;
+        background: #003661;
+        left: -0.4rem;
+        width: 3rem;
+        height: 2.5rem;
+        border-radius: 40px;
+        padding: 0rem 1rem;
+        color: #FBFBFBCC !important;
+        text-align: center;
+        top: -0.1rem;
+        transition: all 1s linear;
+
+
+    }
+
+    & .sun-on-dark-mode {
+        position: absolute;
+        width: 3rem;
+        height: 2.5rem;
+        background-color: transparent;
+        border-radius: 40px;
+        padding: 0rem 1rem;
+        right: -0.2rem;
+        top: -0.1rem;
+        color: #FBFBFBCC !important;
+        text-align: center;
+
+    }
+}
