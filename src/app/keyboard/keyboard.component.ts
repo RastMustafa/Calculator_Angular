@@ -10,6 +10,8 @@ export class KeyboardComponent implements OnInit {
 
   ngOnInit(): void {}
   evalAnswer() {
+    console.log(this.operationEvaluter.clacHistory);
+
     try {
       if (
         this.operationEvaluter.answer !== 0 &&
@@ -29,6 +31,7 @@ export class KeyboardComponent implements OnInit {
           ' ' +
           this.operationEvaluter.operationString;
         this.operationEvaluter.answer = eval(temp);
+        this.operationEvaluter.clacHistory.push(temp);
       }
 
       this.operationEvaluter.updateState.emit();

@@ -8,4 +8,5 @@ export class OperationEvaluter {
   answer: number = 0;
   operationString: string = '';
   errorMsg = '';
+  clacHistory: string[] = [];
 }
