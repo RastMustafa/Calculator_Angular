@@ -1,4 +1,4 @@
-<div class="container-fluid w-100 d-flex">
+<div class="container-fluid w-100 d-flex position-relative">
   <div class="col-9 d-flex justify-content-center">
     <div class="lightBack d-flex gap-1 rounded-pill shadow-sm">
       <button class="lightBlue border-0 rounded-circle px-3">
@@ -10,6 +10,21 @@
     </div>
   </div>
   <div class="col-3 text-center">
-    <h4><i class="fa-sharp fa-solid fa-clock-rotate-left"></i></h4>
+    <h4 class="" (click)="showHistory()">
+      <div
+        [ngClass]="{
+          'show-history shadow': openMenu,
+          'd-none': !openMenu,
+          third: false
+        }"
+      >
+        <div (click)="getHistory(item)" *ngFor="let item of opHistory">
+          -{{ item }}
+
+          <hr />
+        </div>
+      </div>
+      <i class="fa-sharp fa-solid fa-clock-rotate-left"></i>
+    </h4>
   </div>
 </div>

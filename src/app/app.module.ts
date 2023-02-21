@@ -5,18 +5,18 @@ import { AppComponent } from './app.component';
 import { ScreenComponent } from './screen/screen.component';
 import { KeyboardComponent } from './keyboard/keyboard.component';
 import { OptionsComponent } from './screen/options/options.component';
-
+import { ButtonListenerDirective } from './directives/buttonListener.directive';
+import { OperationEvaluter } from './services/operationEvaluter.service';
 @NgModule({
   declarations: [
     AppComponent,
     ScreenComponent,
     KeyboardComponent,
-    OptionsComponent
+    OptionsComponent,
+    ButtonListenerDirective,
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule],
+  providers: [OperationEvaluter],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,12 +1,16 @@
 <div class="h-100 d-flex justify-content-between flex-column">
-  <div class="row my-3 ">
+  <div class="row my-3">
     <app-options></app-options>
   </div>
   <div class="px-3 mb-3">
-    <div class="operations fw-bold my-2 text-end">1.000 * 2 + 2 * 2</div>
+    <div class="operations fw-bold my-2 text-end">
+      {{ errorMsg === "" ? displayedOperation : errorMsg }}
+    </div>
     <div class="h2 d-flex my-2 justify-content-between">
       <span> <strong>=</strong> </span>
-      <span> <strong>2004</strong> </span>
+      <span>
+        <strong>{{ displayedAnswer }}</strong>
+      </span>
     </div>
   </div>
 </div>

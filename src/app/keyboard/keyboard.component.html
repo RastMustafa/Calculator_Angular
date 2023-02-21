@@ -3,41 +3,47 @@
     <div class="col-9">
       <div class="col border rounded-pill shadow-sm mb-2 text-center divBack">
         <div class="d-flex justify-content-around">
-          <div class="py-2 m-0">AC</div>
-          <div class="py-2 m-0">1</div>
-          <div class="py-2 m-0">4</div>
+          <div (click)="onClear()" class="py-2 m-0">AC</div>
+          <div buttonDirective class="py-2 m-0">+/-</div>
+          <div buttonDirective class="py-2 m-0">%</div>
         </div>
       </div>
       <div class="col gap-1">
         <div class="col justify-content-between d-flex gap-1">
-          <div class="keyStyle shadow-sm">1</div>
-          <div class="keyStyle shadow-sm">2</div>
-          <div class="keyStyle shadow-sm">3</div>
+          <div
+            buttonDirective
+            details="'test'"
+            class="keyStyle shadow-sm"
+          >
+            1
+          </div>
+          <div buttonDirective class="keyStyle shadow-sm">2</div>
+          <div buttonDirective class="keyStyle shadow-sm">3</div>
         </div>
         <div class="col justify-content-between d-flex gap-1">
-          <div class="keyStyle shadow-sm">4</div>
-          <div class="keyStyle shadow-sm">5</div>
-          <div class="keyStyle shadow-sm">6</div>
+          <div buttonDirective class="keyStyle shadow-sm">4</div>
+          <div buttonDirective class="keyStyle shadow-sm">5</div>
+          <div buttonDirective class="keyStyle shadow-sm">6</div>
         </div>
         <div class="col justify-content-between d-flex gap-1">
-          <div class="keyStyle shadow-sm">7</div>
-          <div class="keyStyle shadow-sm">8</div>
-          <div class="keyStyle shadow-sm">9</div>
+          <div buttonDirective class="keyStyle shadow-sm">7</div>
+          <div buttonDirective class="keyStyle shadow-sm">8</div>
+          <div buttonDirective class="keyStyle shadow-sm">9</div>
         </div>
         <div class="col justify-content-between d-flex gap-1">
-          <div class="keyStyle shadow-sm">.</div>
-          <div class="keyStyle shadow-sm">0</div>
-          <div class="keyStyle shadow-sm">00</div>
+          <div buttonDirective class="keyStyle shadow-sm">.</div>
+          <div buttonDirective class="keyStyle shadow-sm">0</div>
+          <div buttonDirective class="keyStyle shadow-sm">00</div>
         </div>
       </div>
     </div>
     <div class="col-2 shadow-sm rounded-pill divBack">
       <div class="d-flex h5 fw-bold flex-column flex-wrap text-center">
-        <div class="col py-3">&#247;</div>
-        <div class="col py-3">&#215;</div>
-        <div class="col py-3">-</div>
-        <div class="col py-3">+</div>
-        <div class="col py-3">=</div>
+        <div buttonDirective class="col py-3">&#247;</div>
+        <div buttonDirective class="col py-3">&#215;</div>
+        <div buttonDirective class="col py-3">-</div>
+        <div buttonDirective class="col py-3">+</div>
+        <div (click)="evalAnswer()" class="col py-3">=</div>
       </div>
     </div>
   </div>

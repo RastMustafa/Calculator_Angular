@@ -8,9 +8,8 @@ describe('KeyboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KeyboardComponent ]
-    })
-    .compileComponents();
+      declarations: [KeyboardComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
