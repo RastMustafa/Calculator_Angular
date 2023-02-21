@@ -1,11 +1,24 @@
-<div class="container d-flex main-contanier justify-content-center align-items-center">
+<div
+  class="container d-flex main-contanier justify-content-center align-items-center"
+>
   <div
-    class="app-contanier p-0 d-flex flex-column justify-content-between mx-auto col-sm-8 col-md-6 col-lg-4 col-xl-3 p-3 rounded-5 shadow"
+    class=""
+    [ngClass]="{
+      'screen-light': !selectedMode,
+      'screen-dark': selectedMode,
+      'app-contanier p-0 d-flex flex-column justify-content-between mx-auto col-sm-8 col-md-6 col-lg-4 col-xl-3 p-3 rounded-5 shadow': true
+    }"
   >
     <div class="row flex-grow-1">
       <app-screen></app-screen>
     </div>
-    <div class="row keyboardBackground">
+    <div
+      [ngClass]="{
+        'keyboard-background-light': !selectedMode,
+        'keyboard-background-dark': selectedMode,
+        row: true
+      }"
+    >
       <app-keyboard></app-keyboard>
     </div>
   </div>

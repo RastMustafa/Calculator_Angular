@@ -1,4 +1,10 @@
-<div class="h-100 d-flex justify-content-between flex-column">
+<div
+  [ngClass]="{
+    'screen-light': !selectedMode,
+    'screen-dark': selectedMode,
+    'h-100 test d-flex justify-content-between flex-column': true
+  }"
+>
   <div class="row my-3">
     <app-options></app-options>
   </div>

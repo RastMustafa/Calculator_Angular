@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OperationEvaluter } from '../services/operationEvaluter.service';
+import { LightDarkMode } from '../services/lightDarkMode.service';
 @Component({
   selector: 'app-screen',
   templateUrl: './screen.component.html',
@@ -9,9 +10,16 @@ export class ScreenComponent implements OnInit {
   displayedOperation: string = '';
   displayedAnswer: number = 0;
   errorMsg: string = '';
-  constructor(private operationEvaluter: OperationEvaluter) {}
+  selectedMode: boolean = false;
+  constructor(
+    private operationEvaluter: OperationEvaluter,
+    private lightDarkMode: LightDarkMode
+  ) {}
 
   ngOnInit(): void {
+    this.lightDarkMode.updateSelectedMode.subscribe(() => {
+      this.selectedMode = this.lightDarkMode.selectedMode;
+    });
     try {
       this.operationEvaluter.updateState.subscribe((e: any) => {
         this.displayedOperation = this.operationEvaluter.operationString;
@@ -22,7 +30,7 @@ export class ScreenComponent implements OnInit {
         this.errorMsg = '';
       });
       this.operationEvaluter.errorHangler.subscribe(() => {
-        console.log('first')
+        console.log('first');
         this.displayedOperation = '';
         this.errorMsg = 'Enter a valid expression';
       });
